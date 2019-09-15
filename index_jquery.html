@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./BaseStyle.scss">
+    <style lang="scss">
+
+        .wrapper-app {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 0;
+        }
+
+        .ball{
+            position: absolute;
+            top: 0;
+            left:0;
+            background-color: tomato;
+            z-index: -1;
+
+            transition: left 0.5s;
+        }
+
+        label {
+            transition: color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container pt-5">
+        <div class="wrapper-app">
+            <hr>
+            Animated Slider:<br>
+
+            <div class="d-flex wrapper slider-selector">
+                <div class="ball" style="display: none"></div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Male" data-index="0"> Male
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Female" data-index="1"> Female
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Other" data-index="2"> Other
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex wrapper slider-selector">
+                <div class="ball" style="display: none"></div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Male" data-index="0"> Male
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Female" data-index="1"> Female
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Other" data-index="2"> Other
+                    </label>
+                </div>
+            </div>
+
+
+            <hr>
+            
+            <div class="d-flex wrapper slider-selector">
+                <div class="ball" style="display: none"></div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Male" data-index="0"> Male
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Female" data-index="1"> Female
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Other" data-index="2"> Other
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+            
+            <div class="d-flex wrapper slider-selector">
+                <div class="ball" style="display: none"></div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Male" data-index="0"> Male
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Female" data-index="1"> Female
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="gender" value="Other" data-index="2"> Other
+                    </label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+    <script src="./jquery-main.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Button</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./BaseStyle.scss">
+    <style>
+        [v-cloak] {
+            display: none !important;
+        }
+    </style>
+    <style lang="scss">
+        .wrapper-app {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 0;
+        }
+
+        .ball{
+            position: absolute;
+            top: 0;
+            left:0;
+            background-color: tomato;
+            z-index: -1;
+
+            transition: left 0.5s;
+        }
+
+        label {
+            transition: color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container pt-5">
+        <div class="wrapper-app">
+            <hr>
+            Animated Slider:<br>
+
+            <div class="d-flex wrapper slider-selector" v-cloak data-options='["Male","Female","Other"]'>
+                <div class="ball" :style="{left:ballPosition + 'px'}" v-if="ballPosition!=null"></div>
+                <div v-for="(option, i) in options" :key="i">
+                    <label :class="{selected: selected == option}">
+                        <input type="radio" name="gender" :value="option" v-model="selected"> {{option}}
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex wrapper slider-selector" v-cloak data-options='["1","2","3"]'>
+                <div class="ball" :style="{left:ballPosition + 'px'}" v-if="ballPosition!=null"></div>
+                <div v-for="(option, i) in options" :key="i">
+                    <label :class="{selected: selected == option}">
+                        <input type="radio" name="gender" :value="option" v-model="selected"> {{option}}
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="d-flex wrapper slider-selector" v-cloak data-options='["gabe","hale","mayo"]'>
+                <div class="ball" :style="{left:ballPosition + 'px'}" v-if="ballPosition!=null"></div>
+                <div v-for="(option, i) in options" :key="i">
+                    <label :class="{selected: selected == option}">
+                        <input type="radio" name="gender" :value="option" v-model="selected"> {{option}}
+                    </label>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./vue-main.js">
+    </script>
+</body>
+</html>
