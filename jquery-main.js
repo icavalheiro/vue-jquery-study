@@ -3,6 +3,7 @@ sliders.each(function () {
     let slider = $(this);
     let ball = $(slider.find('div.ball'));
     let inputs = $(slider.find('input'));
+    let selectedInput = $(slider.find('input[selected]'));
     inputs.on('change', function () {
         let element = $(this);
         //set selected class
@@ -16,4 +17,8 @@ sliders.each(function () {
         ball.css('left', (200 * index) + 'px');
         ball.show();
     })
+
+    if(selectedInput.length > 0){
+        selectedInput.trigger('change');
+    }
 })
