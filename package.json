@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "parcel index_jquery.html"
+    "start": "parcel index_jquery.html",
+    "start-vue": "parcel index.html"
   },
   "dependencies": {
     "animejs": "^3.1.0",

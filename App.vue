@@ -1,7 +1,19 @@
 <template>
     <div class="wrapper-app">
         Animated Slider:<br>
-        <SliderAnimated></SliderAnimated>
+        <SliderAnimated :options='["Male","Female","Other"]' selected="Male"></SliderAnimated>
+        <hr>
+        <SliderAnimated :options='["Male","Female","Other"]' selected="Female" small></SliderAnimated>
+        <hr>
+        <SliderAnimated :options='["Male","Female","Other"]'></SliderAnimated>
+        <hr>
+        <SliderAnimated :options='["e","q","w"]'></SliderAnimated>
+        <hr>
+        <SliderAnimated :options='[1,2,3]'></SliderAnimated>
+        <hr>
+        <SliderAnimated :options='[true,false]'></SliderAnimated>
+        <hr>
+        <SliderAnimated :options='["selected", true, 20, 21, "eita", "falhou"]' small></SliderAnimated>
     </div>
 </template>
 
@@ -23,4 +35,5 @@ export default {
     flex-direction: column;
     align-items: center;
 }
+
 </style>
